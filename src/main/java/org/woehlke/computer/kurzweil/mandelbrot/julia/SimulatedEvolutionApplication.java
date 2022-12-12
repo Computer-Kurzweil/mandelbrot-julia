@@ -2,7 +2,7 @@ package org.woehlke.computer.kurzweil.mandelbrot.julia;
 
 import lombok.extern.log4j.Log4j2;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.application.ComputerKurzweilProperties;
-import org.woehlke.computer.kurzweil.mandelbrot.julia.tabs.simulatedevolution.SimulatedEvolutionTab;
+import org.woehlke.computer.kurzweil.mandelbrot.julia.tabs.mandelbrot.julia.SimulatedEvolutionTab;
 
 /**
  * Class with main Method for Starting the Desktop Application.
