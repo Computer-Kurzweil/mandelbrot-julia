@@ -3,31 +3,31 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.woehlke.computer.kurzweil</groupId>
-    <artifactId>mandelbrot-julia</artifactId>
+    <artifactId>mandelbrot</artifactId>
     <version>3.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Mandelbrot Julia</name>
-    <description>Artificial Life Simulation of Bacteria Motion depending on DNA</description>
-    <url>https://github.com/Computer-Kurzweil/simulated-evolution</url>
+    <name>Mandelbrot</name>
+    <description>Computing the Edge of the Mandelbrot Set with a Turing Machine</description>
+    <url>https://java.woehlke.org/mandelbrot</url>
     <inceptionYear>2013</inceptionYear>
 
     <scm>
-        <url>https://github.com/Computer-Kurzweil/mandelbrot-julia.git</url>
-        <connection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot-julia.git</connection>
-        <developerConnection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot-julia.git</developerConnection>
+        <url>https://github.com/Computer-Kurzweil/mandelbrot.git</url>
+        <connection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot.git</connection>
+        <developerConnection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
-        <url>https://github.com/Computer-Kurzweil/mandelbrot-julia/issues/</url>
+        <url>https://github.com/Computer-Kurzweil/mandelbrot/issues/</url>
         <system>GitHub</system>
     </issueManagement>
 
     <distributionManagement>
         <site>
             <id>simulatedevolution.local</id>
-            <url>file://${user.home}/public_html/java/mandelbrot-julia/</url>
+            <url>file://${user.home}/public_html/java/mandelbrot</url>
         </site>
         <snapshotRepository>
             <id>snapshots</id>
@@ -446,6 +446,13 @@
                 <type>maven-plugin</type>
                 <scope>provided</scope>
             </dependency>
+            <!--
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>4.4</version>
+            </dependency>
+            -->
             <dependency>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -1021,7 +1028,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>org.woehlke.computer.kurzweil.mandelbrot.julia.SimulatedEvolutionApplication</mainClass>
+                    <mainClass>org.woehlke.computer.kurzweil.mandelbrot.MandelbrotSetApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -1146,5 +1153,6 @@
             </plugin>
         </plugins>
     </reporting>
+
 
 </project>
