@@ -1,7 +1,7 @@
-# Mandelbrot
+# Mandelbrot vs Julia
 
-![Java CI with Maven](https://github.com/Computer-Kurzweil/mandelbrot/workflows/Java%20CI%20with%20Maven/badge.svg)
-[![Build Status](https://travis-ci.com/Computer-Kurzweil/mandelbrot.svg?branch=master)](https://travis-ci.com/Computer-Kurzweil/mandelbrot)
+![Java CI with Maven](https://github.com/Computer-Kurzweil/mandelbrot-julia/workflows/Java%20CI%20with%20Maven/badge.svg)
+[![Build Status](https://travis-ci.com/Computer-Kurzweil/mandelbrot-julia.svg?branch=master)](https://travis-ci.com/Computer-Kurzweil/mandelbrot-julia)
 
 **Computing the Edge of the Mandelbrot Set with a Turing Machine**
 
@@ -53,12 +53,12 @@ The most beautiful Julia Sets are drawn by clicking into the Border of the Mande
 
 
 ### Repositories
-* [Github Repository](https://github.com/Computer-Kurzweil/mandelbrot)
-* [Maven Project Reports](https://java.woehlke.org/mandelbrot/readme2.html)
+* [Github Repository](https://github.com/Computer-Kurzweil/mandelbrot-julia)
+* [Maven Project Reports](https://java.woehlke.org/mandelbrot-julia/readme2.html)
 
 ### Run the Application
 ```
-git clone https://github.com/Computer-Kurzweil/mandelbrot.git
-cd mandelbrot
+git clone https://github.com/Computer-Kurzweil/mandelbrot-julia.git
+cd mandelbrot-julia
 ./mvnw
 ```
