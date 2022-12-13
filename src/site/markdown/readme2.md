@@ -1,6 +1,6 @@
 # Mandelbrot vs Julia
 
-![Java CI with Maven](https://github.com/Computer-Kurzweil/mandelbrot-julia/workflows/Java%20CI%20with%20Maven/badge.svg)
+[![Java CI with Maven](https://github.com/Computer-Kurzweil/mandelbrot-julia/actions/workflows/maven.yml/badge.svg)](https://github.com/Computer-Kurzweil/mandelbrot-julia/actions/workflows/maven.yml)
 [![Build Status](https://travis-ci.com/Computer-Kurzweil/mandelbrot-julia.svg?branch=master)](https://travis-ci.com/Computer-Kurzweil/mandelbrot-julia)
 
 **Computing the Edge of the Mandelbrot Set with a Turing Machine**
