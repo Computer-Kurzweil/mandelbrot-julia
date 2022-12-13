@@ -3,7 +3,7 @@ package org.woehlke.computer.kurzweil.mandelbrot.view;
 import org.woehlke.computer.kurzweil.mandelbrot.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.control.ControllerThread;
 import org.woehlke.computer.kurzweil.mandelbrot.model.ApplicationModel;
-import org.woehlke.computer.kurzweil.mandelbrot.model.helper.Point;
+import org.woehlke.computer.kurzweil.mandelbrot.model.common.Point;
 import org.woehlke.computer.kurzweil.mandelbrot.view.labels.PanelCopyright;
 import org.woehlke.computer.kurzweil.mandelbrot.view.labels.PanelSubtitle;
 

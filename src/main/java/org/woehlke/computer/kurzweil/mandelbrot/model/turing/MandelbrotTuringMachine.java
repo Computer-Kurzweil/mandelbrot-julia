@@ -12,6 +12,10 @@ import org.woehlke.computer.kurzweil.mandelbrot.model.fractal.GaussianNumberPlan
  * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
  * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
  *
+ * @see GaussianNumberPlane
+ * @see TuringPositions
+ * @see TuringPhaseState
+ *
  * Date: 28.08.13
  * Time: 12:39
  */

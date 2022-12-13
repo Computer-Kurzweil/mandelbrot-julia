@@ -1,4 +1,4 @@
-package org.woehlke.computer.kurzweil.mandelbrot.model.helper;
+package org.woehlke.computer.kurzweil.mandelbrot.model.common;
 
 import java.util.Objects;
 

@@ -2,7 +2,7 @@ package org.woehlke.computer.kurzweil.mandelbrot.model;
 
 import org.woehlke.computer.kurzweil.mandelbrot.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.model.fractal.GaussianNumberPlane;
-import org.woehlke.computer.kurzweil.mandelbrot.model.helper.Point;
+import org.woehlke.computer.kurzweil.mandelbrot.model.common.Point;
 import org.woehlke.computer.kurzweil.mandelbrot.view.state.ApplicationStateMachine;
 import org.woehlke.computer.kurzweil.mandelbrot.model.turing.MandelbrotTuringMachine;
 import org.woehlke.computer.kurzweil.mandelbrot.view.ApplicationFrame;
@@ -72,20 +72,8 @@ public class ApplicationModel {
         return new Point(width, height);
     }
 
-    public void setModeSwitch() {
-        this.applicationStateMachine.setModeSwitch();
-        this.frame.setModeSwitch();
-    }
-
     public GaussianNumberPlane getGaussianNumberPlane() {
         return gaussianNumberPlane;
     }
 
-    public ApplicationFrame getFrame() {
-        return frame;
-    }
-
-    public Config getConfig() {
-        return config;
-    }
 }

@@ -34,17 +34,6 @@ public class ApplicationStateMachine {
         this.setApplicationState(nextApplicationState);
     }
 
-    @Deprecated
-    public void setModeSwitch() {
-        ApplicationState nextApplicationState = this.applicationState;
-        switch (applicationState){
-            case MANDELBROT:
-            case JULIA_SET:
-                break;
-        }
-        this.setApplicationState(nextApplicationState);
-    }
-
     public ApplicationState getApplicationState() {
         return applicationState;
     }
