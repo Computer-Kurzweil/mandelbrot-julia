@@ -1028,7 +1028,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>org.woehlke.computer.kurzweil.mandelbrot.MandelbrotSetApplication</mainClass>
+                    <mainClass>org.woehlke.computer.kurzweil.mandelbrot.julia.MandelbrotSetApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
