@@ -8,10 +8,12 @@ import java.util.Properties;
 
 /**
  * Mandelbrot Set drawn by a Turing Machine.
- *
- * (C) 2006 - 2015 Thomas Woehlke.
- * https://thomas-woehlke.blogspot.com/2016/01/mandelbrot-set-drawn-by-turing-machine.html
+ * (C) 2006 - 2022 Thomas Woehlke.
  * @author Thomas Woehlke
+ *
+ * @see <a href="https://thomas-woehlke.blogspot.com/2016/01/mandelbrot-set-drawn-by-turing-machine.html">Blog Article</a>
+ * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
+ * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
  *
  * Created by tw on 16.12.2019.
  */
@@ -22,11 +24,6 @@ public class Config implements ConfigProperties {
     private String copyright;
     private int width;
     private int height;
-
-    private String buttonsLabel;
-    private String buttonsSwitch;
-    private String buttonsZoom;
-    private String buttonsZoomOut;
 
     public Config() {
         String appPropertiesFile = (APP_PROPERTIES_FILENAME);
@@ -46,10 +43,6 @@ public class Config implements ConfigProperties {
             String heightString = prop.getProperty(KEY_HEIGHT,HEIGHT);
             width = Integer.parseInt(widthString);
             height = Integer.parseInt(heightString);
-            buttonsLabel = prop.getProperty(KEY_BUTTONS_LABEL,BUTTONS_LABEL);
-            buttonsSwitch = prop.getProperty(KEY_BUTTONS_SWITCH,BUTTONS_SWITCH);
-            buttonsZoom = prop.getProperty(KEY_BUTTONS_ZOOM,BUTTONS_ZOOM);
-            buttonsZoomOut = prop.getProperty(KEY_BUTTONS_ZOOMOUT,BUTTONS_ZOOMOUT);
         } catch (IOException ex) {
             System.out.println(ex.getLocalizedMessage());
         }
@@ -75,22 +68,6 @@ public class Config implements ConfigProperties {
         return height;
     }
 
-    public String getButtonsLabel() {
-        return buttonsLabel;
-    }
-
-    public String getButtonsSwitch() {
-        return buttonsSwitch;
-    }
-
-    public String getButtonsZoom() {
-        return buttonsZoom;
-    }
-
-    public String getButtonsZoomOut() {
-        return buttonsZoomOut;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -100,16 +77,12 @@ public class Config implements ConfigProperties {
             getHeight() == config.getHeight() &&
             Objects.equals(getTitle(), config.getTitle()) &&
             Objects.equals(getSubtitle(), config.getSubtitle()) &&
-            Objects.equals(getCopyright(), config.getCopyright()) &&
-            Objects.equals(getButtonsLabel(), config.getButtonsLabel()) &&
-            Objects.equals(getButtonsSwitch(), config.getButtonsSwitch()) &&
-            Objects.equals(getButtonsZoom(), config.getButtonsZoom()) &&
-            Objects.equals(getButtonsZoomOut(), config.getButtonsZoomOut());
+            Objects.equals(getCopyright(), config.getCopyright());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getTitle(), getSubtitle(), getCopyright(), getWidth(), getHeight(), getButtonsLabel(), getButtonsSwitch(), getButtonsZoom(), getButtonsZoomOut());
+        return Objects.hash(getTitle(), getSubtitle(), getCopyright(), getWidth(), getHeight());
     }
 
     @Override
@@ -120,10 +93,6 @@ public class Config implements ConfigProperties {
             ", copyright='" + copyright + '\'' +
             ", width=" + width +
             ", height=" + height +
-            ", buttonsLabel='" + buttonsLabel + '\'' +
-            ", buttonsSwitch='" + buttonsSwitch + '\'' +
-            ", buttonsZoom='" + buttonsZoom + '\'' +
-            ", buttonsZoomOut='" + buttonsZoomOut + '\'' +
             '}';
     }
 }

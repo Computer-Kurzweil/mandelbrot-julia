@@ -3,16 +3,18 @@ package org.woehlke.computer.kurzweil.mandelbrot.model;
 import org.woehlke.computer.kurzweil.mandelbrot.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.model.fractal.GaussianNumberPlane;
 import org.woehlke.computer.kurzweil.mandelbrot.model.helper.Point;
-import org.woehlke.computer.kurzweil.mandelbrot.model.state.ApplicationStateMachine;
+import org.woehlke.computer.kurzweil.mandelbrot.view.state.ApplicationStateMachine;
 import org.woehlke.computer.kurzweil.mandelbrot.model.turing.MandelbrotTuringMachine;
 import org.woehlke.computer.kurzweil.mandelbrot.view.ApplicationFrame;
 
 /**
  * Mandelbrot Set drawn by a Turing Machine.
- *
- * (C) 2006 - 2015 Thomas Woehlke.
- * https://thomas-woehlke.blogspot.com/2016/01/mandelbrot-set-drawn-by-turing-machine.html
+ * (C) 2006 - 2022 Thomas Woehlke.
  * @author Thomas Woehlke
+ *
+ * @see <a href="https://thomas-woehlke.blogspot.com/2016/01/mandelbrot-set-drawn-by-turing-machine.html">Blog Article</a>
+ * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
+ * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
  *
  * Created by tw on 16.12.2019.
  */
@@ -44,12 +46,6 @@ public class ApplicationModel {
             case JULIA_SET:
                 gaussianNumberPlane.computeTheJuliaSetFor(c);
                 break;
-            case MANDELBROT_ZOOM:
-                gaussianNumberPlane.zoomIntoTheMandelbrotSet(c);
-                break;
-            case JULIA_SET_ZOOM:
-                gaussianNumberPlane.zoomIntoTheJuliaSetFor(c);
-                break;
         }
         return repaint;
     }
@@ -61,8 +57,6 @@ public class ApplicationModel {
                 repaint = mandelbrotTuringMachine.step();
                 break;
             case JULIA_SET:
-            case MANDELBROT_ZOOM:
-            case JULIA_SET_ZOOM:
                 break;
         }
         return repaint;
@@ -83,12 +77,6 @@ public class ApplicationModel {
         this.frame.setModeSwitch();
     }
 
-    public void setModeZoom() {
-        this.gaussianNumberPlane.setModeZoom();
-        this.applicationStateMachine.setModeZoom();
-        this.frame.setModeZoom();
-    }
-
     public GaussianNumberPlane getGaussianNumberPlane() {
         return gaussianNumberPlane;
     }
@@ -99,19 +87,5 @@ public class ApplicationModel {
 
     public Config getConfig() {
         return config;
-    }
-
-    public void zoomOut() {
-        switch (applicationStateMachine.getApplicationState()) {
-            case MANDELBROT:
-            case JULIA_SET:
-                break;
-            case MANDELBROT_ZOOM:
-                gaussianNumberPlane.zoomOutOfTheMandelbrotSet();
-                break;
-            case JULIA_SET_ZOOM:
-                gaussianNumberPlane.zoomOutOfTheJuliaSet();
-                break;
-        }
     }
 }

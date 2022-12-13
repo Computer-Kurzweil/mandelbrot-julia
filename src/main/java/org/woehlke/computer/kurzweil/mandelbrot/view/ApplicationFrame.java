@@ -4,18 +4,37 @@ import org.woehlke.computer.kurzweil.mandelbrot.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.control.ControllerThread;
 import org.woehlke.computer.kurzweil.mandelbrot.model.ApplicationModel;
 import org.woehlke.computer.kurzweil.mandelbrot.model.helper.Point;
+import org.woehlke.computer.kurzweil.mandelbrot.view.labels.PanelCopyright;
+import org.woehlke.computer.kurzweil.mandelbrot.view.labels.PanelSubtitle;
 
 import javax.accessibility.Accessible;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.ImageObserver;
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
- * (C) 2006 - 2013 Thomas Woehlke.
- * https://thomas-woehlke.blogspot.com/2016/01/mandelbrot-set-drawn-by-turing-machine.html
+ * Mandelbrot Set drawn by a Turing Machine. Click to see corresponding Julia set.
+ * (C) 2006 - 2022 Thomas Woehlke.
  * @author Thomas Woehlke
+ *
+ * @see ControllerThread
+ * @see ApplicationCanvas
+ * @see ApplicationModel
+ * @see PanelSubtitle
+ * @see PanelCopyright
+ *
+ * @see JFrame
+ * @see ImageObserver
+ * @see WindowListener
+ * @see MouseListener
+ *
+ * @see <a href="https://thomas-woehlke.blogspot.com/2016/01/mandelbrot-set-drawn-by-turing-machine.html">Blog Article</a>
+ * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
+ * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
+ *
  * Date: 04.02.2006
  * Time: 18:47:46
  */
@@ -26,6 +45,7 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
         WindowListener,
         MouseListener {
 
+    @Serial
     private final static long serialVersionUID = 242L;
 
     private volatile ControllerThread controllerThread;
@@ -40,20 +60,16 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
         BoxLayout layout = new BoxLayout(rootPane, BoxLayout.PAGE_AXIS);
         this.canvas = new ApplicationCanvas(applicationModel);
         this.controllerThread = new ControllerThread(applicationModel, this);
-        PanelButtons panelButtons = new PanelButtons(this.applicationModel);
         PanelSubtitle panelSubtitle = new PanelSubtitle(config.getSubtitle());
         PanelCopyright panelCopyright = new PanelCopyright(config.getCopyright());
-        JSeparator separator = new JSeparator();
         rootPane.setLayout(layout);
         rootPane.add(panelSubtitle);
         rootPane.add(canvas);
         rootPane.add(panelCopyright);
-        rootPane.add(separator);
-        rootPane.add(panelButtons);
-        addWindowListener(this);
+        this.addWindowListener(this);
         this.canvas.addMouseListener(   this);
-        showMeInit();
-        setModeSwitch();
+        this.showMeInit();
+        this.setModeSwitch();
         this.controllerThread.start();
     }
 
@@ -101,6 +117,9 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
     @Override
     public void mouseExited(MouseEvent e) {}
 
+    /**
+     * Things to do, to show the Application Window started by Constructor
+     */
     public void showMeInit() {
         pack();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -123,7 +142,7 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
     }
 
     /**
-     * TODO write doc.
+     * Things to do, to show the Application Window again.
      */
     public void showMe() {
         this.pack();
@@ -136,10 +155,6 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
 
     public void setModeSwitch() {
         canvas.setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
-    }
-
-    public void setModeZoom() {
-        canvas.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }
 
     public ApplicationCanvas getCanvas() {
