@@ -1,4 +1,4 @@
-# Mandelbrot vs Julia
+# Mandelbrot to Julia
 
 ![Java CI with Maven](https://github.com/Computer-Kurzweil/mandelbrot-julia/workflows/Java%20CI%20with%20Maven/badge.svg)
 [![Build Status](https://travis-ci.com/Computer-Kurzweil/mandelbrot-julia.svg?branch=master)](https://travis-ci.com/Computer-Kurzweil/mandelbrot-julia)
