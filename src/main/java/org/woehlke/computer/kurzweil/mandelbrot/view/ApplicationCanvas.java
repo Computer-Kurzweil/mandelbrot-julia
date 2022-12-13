@@ -4,6 +4,7 @@ import org.woehlke.computer.kurzweil.mandelbrot.model.ApplicationModel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.Serial;
 
 
 /**
@@ -15,11 +16,18 @@ import java.awt.*;
  * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
  * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
  *
+ * @see ApplicationModel
+ * @see Dimension
+ *
+ * @see JComponent
+ * @see Graphics
+ *
  * Date: 05.02.2006
  * Time: 00:51:51
  */
 public class ApplicationCanvas extends JComponent {
 
+    @Serial
     private final static long serialVersionUID = 242L;
 
     private volatile ApplicationModel app;

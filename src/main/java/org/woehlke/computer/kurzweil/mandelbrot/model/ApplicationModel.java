@@ -16,6 +16,13 @@ import org.woehlke.computer.kurzweil.mandelbrot.view.ApplicationFrame;
  * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
  * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
  *
+ * @see GaussianNumberPlane
+ * @see MandelbrotTuringMachine
+ * @see ApplicationStateMachine
+ *
+ * @see Config
+ * @see ApplicationFrame
+ *
  * Created by tw on 16.12.2019.
  */
 public class ApplicationModel {
