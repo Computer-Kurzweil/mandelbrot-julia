@@ -21,8 +21,8 @@ public class MandelbrotSetApplication {
 
     private MandelbrotSetApplication() {
         String conf = "application.yml";
-        String jar = "target/mandelbrot-julia.jar";
-        ComputerKurzweilProperties config = ComputerKurzweilProperties.propertiesFactory(conf,jar);
+        String jarPath = "target/mandelbrot-julia.jar";
+        ComputerKurzweilProperties config = ComputerKurzweilProperties.propertiesFactory(conf,jarPath);
         ApplicationFrame frame = new ApplicationFrame(config);
     }
 
