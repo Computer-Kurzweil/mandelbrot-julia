@@ -1,7 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.model;
 
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
-import org.woehlke.computer.kurzweil.mandelbrot.julia.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.fractal.GaussianNumberPlane;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.common.Point;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.view.state.ApplicationStateMachine;
@@ -21,7 +20,7 @@ import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
  * @see MandelbrotTuringMachine
  * @see ApplicationStateMachine
  *
- * @see Config
+ * @see ComputerKurzweilProperties
  * @see ApplicationFrame
  *
  * Created by tw on 16.12.2019.

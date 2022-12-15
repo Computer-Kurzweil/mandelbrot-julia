@@ -1,7 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia;
 
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
-import org.woehlke.computer.kurzweil.mandelbrot.julia.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
 
 /**
@@ -11,7 +10,7 @@ import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
  * @author Thomas Woehlke
  *
  * @see ApplicationFrame
- * @see Config
+ * @see ComputerKurzweilProperties
  *
  * @see <a href="https://thomas-woehlke.blogspot.com/2016/01/mandelbrot-set-drawn-by-turing-machine.html">Blog Article</a>
  * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
@@ -24,6 +23,7 @@ public class MandelbrotSetApplication {
         String jarPath = "target/mandelbrot-julia.jar";
         ComputerKurzweilProperties config = ComputerKurzweilProperties.propertiesFactory(conf,jarPath);
         ApplicationFrame frame = new ApplicationFrame(config);
+        frame.start();
     }
 
     /**

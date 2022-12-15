@@ -19,7 +19,10 @@ public class PanelCopyright extends JPanel {
     private final static long serialVersionUID = 242L;
 
     public PanelCopyright(String subtitle) {
-        this.setLayout(new FlowLayout());
+        int align = FlowLayout.CENTER;
+        int hgap = 2;
+        int vgap = 2;
+        this.setLayout(new FlowLayout(align,hgap, vgap));
         this.add(new JLabel(subtitle));
     }
 

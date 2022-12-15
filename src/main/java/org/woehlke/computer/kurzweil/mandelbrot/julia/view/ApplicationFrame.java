@@ -1,7 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.view;
 
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
-import org.woehlke.computer.kurzweil.mandelbrot.julia.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.control.ControllerThread;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.common.Point;
@@ -160,5 +159,8 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
 
     public ApplicationCanvas getCanvas() {
         return canvas;
+    }
+
+    public void start() {
     }
 }
