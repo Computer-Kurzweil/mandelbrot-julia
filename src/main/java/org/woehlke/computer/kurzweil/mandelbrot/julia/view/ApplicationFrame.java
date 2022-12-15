@@ -124,7 +124,7 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
         pack();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double width = this.rootPane.getWidth();
-        double height  = this.canvas.getHeight() + 180;
+        double height  = this.canvas.getHeight() + 120;
         double startX = (screenSize.getWidth() - width) / 2d;
         double startY = (screenSize.getHeight() - height) / 2d;
         int myheight = Double.valueOf(height).intValue();
