@@ -75,8 +75,9 @@ public class ApplicationModel {
     }
 
     public Point getWorldDimensions() {
-        int width = config.getMandelbrotJulia().getView().getWidtht();
-        int height = config.getMandelbrotJulia().getView().getHeight();
+        int scale = config.getMandelbrotZoom().getView().getScale();
+        int width = scale * config.getMandelbrotJulia().getView().getWidth();
+        int height = scale * config.getMandelbrotJulia().getView().getHeight();
         return new Point(width, height);
     }
 

@@ -13,7 +13,7 @@ allinone:
     start: 'Start'
     stop: 'Stop'
     info: 'Info'
-mandelbrot-julia:
+mandelbrotJulia:
   view:
     title: 'Mandelbrot Set'
     subtitle: 'Fractal Mandelbrot Set drawn by a Turing Machine'
@@ -23,7 +23,7 @@ mandelbrot-julia:
     scale: 1
   control:
     threadSleepTime: 50
-mandelbrot-zoom:
+mandelbrotZoom:
   view:
     title: 'Mandelbrot Set'
     subtitle: 'Fractal Mandelbrot Set drawn by a Turing Machine'

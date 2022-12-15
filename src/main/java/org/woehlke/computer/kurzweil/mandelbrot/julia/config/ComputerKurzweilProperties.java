@@ -168,7 +168,7 @@ public class ComputerKurzweilProperties implements Serializable {
             private String copyright;
 
             @NotBlank
-            private Integer widtht;
+            private Integer width;
 
             @NotBlank
             private Integer height;
@@ -222,7 +222,7 @@ public class ComputerKurzweilProperties implements Serializable {
             private String buttonsZoomLabel;
 
             @NotBlank
-            private Integer widtht;
+            private Integer width;
 
             @NotBlank
             private Integer height;

@@ -20,8 +20,9 @@ import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
 public class MandelbrotSetApplication {
 
     private MandelbrotSetApplication() {
-        //Config config = new Config();
-        ComputerKurzweilProperties config = new ComputerKurzweilProperties();
+        String conf = "application.yml";
+        String jar = "target/mandelbrot-julia.jar";
+        ComputerKurzweilProperties config = ComputerKurzweilProperties.propertiesFactory(conf,jar);
         ApplicationFrame frame = new ApplicationFrame(config);
     }
 
