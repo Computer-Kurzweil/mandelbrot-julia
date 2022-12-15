@@ -1,5 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia;
 
+import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
 
@@ -19,7 +20,8 @@ import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
 public class MandelbrotSetApplication {
 
     private MandelbrotSetApplication() {
-        Config config = new Config();
+        //Config config = new Config();
+        ComputerKurzweilProperties config = new ComputerKurzweilProperties();
         ApplicationFrame frame = new ApplicationFrame(config);
     }
 

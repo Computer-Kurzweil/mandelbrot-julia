@@ -1,5 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.view;
 
+import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.control.ControllerThread;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
@@ -54,14 +55,14 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
     private volatile Rectangle rectangleBounds;
     private volatile Dimension dimensionSize;
 
-    public ApplicationFrame(Config config) {
-        super(config.getTitle());
+    public ApplicationFrame(ComputerKurzweilProperties config) {
+        super(config.getMandelbrotJulia().getView().getTitle());
         this.applicationModel = new ApplicationModel(config,this);
         BoxLayout layout = new BoxLayout(rootPane, BoxLayout.PAGE_AXIS);
         this.canvas = new ApplicationCanvas(applicationModel);
         this.controllerThread = new ControllerThread(applicationModel, this);
-        PanelSubtitle panelSubtitle = new PanelSubtitle(config.getSubtitle());
-        PanelCopyright panelCopyright = new PanelCopyright(config.getCopyright());
+        PanelSubtitle panelSubtitle = new PanelSubtitle(config.getMandelbrotJulia().getView().getSubtitle());
+        PanelCopyright panelCopyright = new PanelCopyright(config.getMandelbrotJulia().getView().getCopyright());
         rootPane.setLayout(layout);
         rootPane.add(panelSubtitle);
         rootPane.add(canvas);

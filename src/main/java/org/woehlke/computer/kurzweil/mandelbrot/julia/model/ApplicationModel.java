@@ -1,5 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.model;
 
+import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.Config;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.fractal.GaussianNumberPlane;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.common.Point;
@@ -31,10 +32,10 @@ public class ApplicationModel {
     private volatile MandelbrotTuringMachine mandelbrotTuringMachine;
     private volatile ApplicationStateMachine applicationStateMachine;
 
-    private volatile Config config;
+    private volatile ComputerKurzweilProperties config;
     private volatile ApplicationFrame frame;
 
-    public ApplicationModel(Config config, ApplicationFrame frame) {
+    public ApplicationModel(ComputerKurzweilProperties config, ApplicationFrame frame) {
         this.config = config;
         this.frame = frame;
         this.gaussianNumberPlane = new GaussianNumberPlane(this);
@@ -74,8 +75,8 @@ public class ApplicationModel {
     }
 
     public Point getWorldDimensions() {
-        int width = config.getWidth();
-        int height = config.getHeight();
+        int width = config.getMandelbrotJulia().getView().getWidtht();
+        int height = config.getMandelbrotJulia().getView().getHeight();
         return new Point(width, height);
     }
 
