@@ -47,7 +47,6 @@ public class ApplicationCanvas extends JComponent {
         this.setSize(this.preferredSize);
         this.setPreferredSize(preferredSize);
         super.paintComponent(g);
-
         for(int y = 0; y < app.getWorldDimensions().getY(); y++){
             for(int x = 0; x < app.getWorldDimensions().getX(); x++){
                 Color stateColor = getColorForCellStatus(app.getCellStatusFor(x,y));
@@ -60,10 +59,8 @@ public class ApplicationCanvas extends JComponent {
     private Color getColorForCellStatus(int cellStatus){
         int red = 0;
         int green = 0;
-        if(cellStatus > 255) {
-            cellStatus = 255;
-        }
-        int blue = cellStatus;
+        int blue = cellStatus * 4;
+        blue = Math.min(blue,255);
         Color stateColor = new Color(red, green, blue);
         return stateColor;
     }
