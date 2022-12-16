@@ -1,6 +1,5 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.control;
 
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
@@ -26,38 +25,37 @@ import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
 @Slf4j
 public class ControllerThread extends Thread implements Runnable {
 
-    private volatile ApplicationModel applicationModel;
+    private volatile ApplicationModel model;
     private volatile ApplicationFrame frame;
 
-    private final int THREAD_SLEEP_TIME = 1;
-
     private volatile Boolean goOn;
+    private final int threadSsleepTime;
 
     public ControllerThread(ApplicationModel model, ApplicationFrame frame) {
         this.frame = frame;
-        this.applicationModel = model;
-        goOn = Boolean.TRUE;
+        this.model = model;
+        this.goOn = Boolean.TRUE;
+        this.threadSsleepTime = 1;
     }
 
     public void run() {
-        boolean doIt;
+        boolean doIt = goOn.booleanValue();
         do {
-            synchronized (goOn) {
-                doIt = goOn.booleanValue();
-            }
-            if(this.applicationModel.step()){
+            doIt = isRunning();
+            if(this.model.step()){
                 frame.getCanvas().repaint();
             }
-            try { sleep(THREAD_SLEEP_TIME); }
+            try { sleep(threadSsleepTime); }
             catch (InterruptedException e) { }
-        }
-        while (doIt);
+        } while (doIt);
     }
 
-    public void exit() {
-        synchronized (goOn) {
-            goOn = Boolean.FALSE;
-        }
+    private synchronized boolean isRunning(){
+        return goOn;
+    }
+
+    public synchronized void exit() {
+        goOn = Boolean.FALSE;
     }
 
 }
