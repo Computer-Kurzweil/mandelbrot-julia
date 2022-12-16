@@ -1,5 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.view;
 
+import lombok.extern.log4j.Log4j2;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.control.ControllerThread;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
@@ -39,6 +40,7 @@ import java.io.Serializable;
  * Date: 04.02.2006
  * Time: 18:47:46
  */
+@Log4j2
 public class ApplicationFrame extends JFrame implements ImageObserver,
         MenuContainer,
         Serializable,

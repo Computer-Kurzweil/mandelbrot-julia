@@ -1,5 +1,7 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.view.canvas;
 
+
+import lombok.extern.log4j.Log4j2;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
 
 import javax.swing.*;
@@ -25,6 +27,7 @@ import java.io.Serial;
  * Date: 05.02.2006
  * Time: 00:51:51
  */
+@Log4j2
 public class ApplicationCanvas extends JComponent {
 
     @Serial
@@ -46,17 +49,25 @@ public class ApplicationCanvas extends JComponent {
         this.setSize(this.preferredSize);
         this.setPreferredSize(preferredSize);
         super.paintComponent(g);
-        int red = 0;
-        int green = 0;
-        int blue = 0;
+
         for(int y = 0; y < app.getWorldDimensions().getY(); y++){
             for(int x = 0; x < app.getWorldDimensions().getX(); x++){
-                blue = (((app.getCellStatusFor(x,y))*2)%256);
-                Color stateColor = new Color(red, green, blue);
+                Color stateColor = getColorForCellStatus(app.getCellStatusFor(x,y));
                 g.setColor(stateColor);
                 g.drawLine(x,y,x,y);
             }
         }
+    }
+
+    private Color getColorForCellStatus(int cellStatus){
+        int red = 0;
+        int green = 0;
+        log.info("-----------------------------");
+        log.info(" blue: "+cellStatus);
+        log.info("-----------------------------");
+        int blue = cellStatus % 256;
+        Color stateColor = new Color(red, green, blue);
+        return stateColor;
     }
 
     public void update(Graphics g) {
