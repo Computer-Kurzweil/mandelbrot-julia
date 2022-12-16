@@ -1,4 +1,4 @@
-package org.woehlke.computer.kurzweil.mandelbrot.julia.view;
+package org.woehlke.computer.kurzweil.mandelbrot.julia.view.canvas;
 
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
 
