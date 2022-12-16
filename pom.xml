@@ -279,6 +279,13 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-bom</artifactId>
+                <version>${version.log4j2}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
                 <version>4.3</version>
@@ -319,6 +326,7 @@
                 <artifactId>maven-scm-client</artifactId>
                 <version>${version.maven.scm}</version>
             </dependency>
+            <!--
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-slf4j-impl</artifactId>
@@ -339,6 +347,7 @@
                 <artifactId>log4j-core</artifactId>
                 <version>${version.log4j2}</version>
             </dependency>
+            -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>

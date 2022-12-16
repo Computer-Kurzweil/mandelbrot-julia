@@ -1,7 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.view.canvas;
 
 
-import lombok.extern.log4j.Log4j2;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
 
 import javax.swing.*;
@@ -27,7 +26,6 @@ import java.io.Serial;
  * Date: 05.02.2006
  * Time: 00:51:51
  */
-@Log4j2
 public class ApplicationCanvas extends JComponent {
 
     @Serial
@@ -62,10 +60,10 @@ public class ApplicationCanvas extends JComponent {
     private Color getColorForCellStatus(int cellStatus){
         int red = 0;
         int green = 0;
-        log.info("-----------------------------");
-        log.info(" blue: "+cellStatus);
-        log.info("-----------------------------");
-        int blue = cellStatus % 256;
+        if(cellStatus > 255) {
+            cellStatus = 255;
+        }
+        int blue = cellStatus;
         Color stateColor = new Color(red, green, blue);
         return stateColor;
     }

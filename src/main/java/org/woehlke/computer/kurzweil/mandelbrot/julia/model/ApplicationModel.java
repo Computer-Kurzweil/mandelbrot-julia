@@ -1,6 +1,7 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.model;
 
 import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.fractal.GaussianNumberPlane;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.common.Point;
@@ -26,7 +27,7 @@ import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
  *
  * Created by tw on 16.12.2019.
  */
-@Log4j2
+@Slf4j
 public class ApplicationModel {
 
     private volatile GaussianNumberPlane gaussianNumberPlane;

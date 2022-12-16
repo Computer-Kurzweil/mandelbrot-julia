@@ -7,6 +7,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.InputStream;
 import java.io.Serializable;
@@ -21,7 +22,7 @@ import java.util.jar.JarFile;
  * @see <a href="https://github.com/Computer-Kurzweil/simulated-evolution">Github Repository</a>
  * @see <a href="https://java.woehlke.org/simulated-evolution/">Maven Project Repository</a>
  */
-@Log4j2
+@Slf4j
 @ToString
 @EqualsAndHashCode
 @NoArgsConstructor
