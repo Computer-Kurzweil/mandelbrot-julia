@@ -4,7 +4,7 @@
 
     <groupId>org.woehlke.computer.kurzweil</groupId>
     <artifactId>mandelbrot-julia</artifactId>
-    <version>3.0.3</version>
+    <version>3.0.4-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Mandelbrot to Julia</name>
@@ -16,7 +16,7 @@
         <url>https://github.com/Computer-Kurzweil/mandelbrot-julia.git</url>
         <connection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot-julia.git</connection>
         <developerConnection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot-julia.git</developerConnection>
-        <tag>mandelbrot-julia-3.0.3</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
