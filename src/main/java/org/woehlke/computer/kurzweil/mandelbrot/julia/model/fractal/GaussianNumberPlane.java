@@ -3,9 +3,6 @@ package org.woehlke.computer.kurzweil.mandelbrot.julia.model.fractal;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.common.Point;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-//import java.util.logging.Logger;
 
 /**
  * Mandelbrot Set drawn by a Turing Machine.
@@ -24,8 +21,6 @@ import java.util.Deque;
 public class GaussianNumberPlane {
 
     private volatile int[][] lattice;
-
-    private volatile ComplexNumber complexNumberForJuliaSetC;
 
     private final Point worldDimensions;
 
@@ -121,8 +116,8 @@ public class GaussianNumberPlane {
     }
 
     public synchronized void computeTheJuliaSetFor(Point pointFromMandelbrotSet) {
-        ComplexNumber c = getComplexNumberFromLatticeCoordsForMandelbrot(pointFromMandelbrotSet);
-        this.complexNumberForJuliaSetC = c;
-        computeTheJuliaSetForC(c);
+        ComplexNumber complexNumberForJuliaSetC =
+            getComplexNumberFromLatticeCoordsForMandelbrot(pointFromMandelbrotSet);
+        computeTheJuliaSetForC(complexNumberForJuliaSetC);
     }
 }
