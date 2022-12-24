@@ -52,9 +52,6 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
     @Serial
     private final static long serialVersionUID = 242L;
 
-    private final PanelSubtitle panelSubtitle;
-    private final PanelCopyright panelCopyright;
-
     private volatile ControllerThread controller;
     private volatile ApplicationCanvas canvas;
     private volatile ApplicationModel model;
@@ -66,8 +63,8 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
         this.model = new ApplicationModel(config,this);
         this.canvas = new ApplicationCanvas(model);
         this.controller = new ControllerThread(model, this);
-        this. panelSubtitle = new PanelSubtitle(config.getMandelbrotJulia().getView().getSubtitle());
-        this.panelCopyright = new PanelCopyright(config.getMandelbrotJulia().getView().getCopyright());
+        PanelSubtitle panelSubtitle = new PanelSubtitle(config.getMandelbrotJulia().getView().getSubtitle());
+        PanelCopyright panelCopyright = new PanelCopyright(config.getMandelbrotJulia().getView().getCopyright());
         BoxLayout layout = new BoxLayout(rootPane, BoxLayout.PAGE_AXIS);
         rootPane.setLayout(layout);
         rootPane.add(panelSubtitle);

@@ -13,9 +13,9 @@
     <inceptionYear>2013</inceptionYear>
 
     <scm>
-        <url>https://github.com/Computer-Kurzweil/mandelbrot-julia.git</url>
         <connection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot-julia.git</connection>
         <developerConnection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot-julia.git</developerConnection>
+        <url>https://github.com/Computer-Kurzweil/mandelbrot-julia/tree/${project.scm.tag}</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -326,28 +326,6 @@
                 <artifactId>maven-scm-client</artifactId>
                 <version>${version.maven.scm}</version>
             </dependency>
-            <!--
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-slf4j-impl</artifactId>
-                <version>${version.log4j2}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
-                <version>${version.log4j2}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-jcl</artifactId>
-                <version>${version.log4j2}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${version.log4j2}</version>
-            </dependency>
-            -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>

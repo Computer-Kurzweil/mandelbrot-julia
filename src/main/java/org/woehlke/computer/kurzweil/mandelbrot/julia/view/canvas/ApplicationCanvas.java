@@ -31,8 +31,8 @@ public class ApplicationCanvas extends JComponent {
     @Serial
     private final static long serialVersionUID = 242L;
 
-    private volatile ApplicationModel app;
-    private volatile Dimension preferredSize;
+    private final ApplicationModel app;
+    private final Dimension preferredSize;
 
     public ApplicationCanvas(ApplicationModel app) {
         this.app = app;
@@ -61,8 +61,7 @@ public class ApplicationCanvas extends JComponent {
         int green = 0;
         int blue = cellStatus * 3 + 32;
         blue = Math.min(blue,255);
-        Color stateColor = new Color(red, green, blue);
-        return stateColor;
+        return new Color(red, green, blue);
     }
 
     public void update(Graphics g) {
