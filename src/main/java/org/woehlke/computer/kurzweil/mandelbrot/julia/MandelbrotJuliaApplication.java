@@ -5,7 +5,6 @@ import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
 
 /**
  * Mandelbrot Set drawn by a Turing Machine.
- *
  * (C) 2006 - 2022 Thomas Woehlke.
  * @author Thomas Woehlke
  *
