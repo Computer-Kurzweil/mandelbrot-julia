@@ -137,6 +137,11 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="libs-release-local-woehlke-org" />
+      <option name="name" value="woehlke.org" />
+      <option name="url" value="http://localhost:8081/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="sonatype-releases" />
       <option name="name" value="Sonatype Repository" />
       <option name="url" value="https://oss.sonatype.org/content/repositories/releases/" />
