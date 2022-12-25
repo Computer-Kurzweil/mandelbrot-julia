@@ -1,13 +1,12 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.model;
 
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.fractal.GaussianNumberPlane;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.common.Point;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.view.state.ApplicationStateMachine;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.turing.MandelbrotTuringMachine;
-import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
+import org.woehlke.computer.kurzweil.mandelbrot.julia.view.MandelbrotJuliaFrame;
 
 /**
  * Mandelbrot Set drawn by a Turing Machine.
@@ -23,7 +22,7 @@ import org.woehlke.computer.kurzweil.mandelbrot.julia.view.ApplicationFrame;
  * @see ApplicationStateMachine
  *
  * @see ComputerKurzweilProperties
- * @see ApplicationFrame
+ * @see MandelbrotJuliaFrame
  *
  * Created by tw on 16.12.2019.
  */
@@ -35,9 +34,9 @@ public class ApplicationModel {
     private volatile ApplicationStateMachine applicationStateMachine;
 
     private volatile ComputerKurzweilProperties config;
-    private volatile ApplicationFrame frame;
+    private volatile MandelbrotJuliaFrame frame;
 
-    public ApplicationModel(ComputerKurzweilProperties config, ApplicationFrame frame) {
+    public ApplicationModel(ComputerKurzweilProperties config, MandelbrotJuliaFrame frame) {
         this.config = config;
         this.frame = frame;
         this.gaussianNumberPlane = new GaussianNumberPlane(this);

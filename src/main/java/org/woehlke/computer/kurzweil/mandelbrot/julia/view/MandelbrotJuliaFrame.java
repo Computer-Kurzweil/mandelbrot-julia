@@ -1,12 +1,11 @@
 package org.woehlke.computer.kurzweil.mandelbrot.julia.view;
 
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.control.ControllerThread;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.ApplicationModel;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.model.common.Point;
-import org.woehlke.computer.kurzweil.mandelbrot.julia.view.canvas.ApplicationCanvas;
+import org.woehlke.computer.kurzweil.mandelbrot.julia.view.canvas.MandelbrotJuliaCanvas;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.view.labels.PanelCopyright;
 import org.woehlke.computer.kurzweil.mandelbrot.julia.view.labels.PanelSubtitle;
 
@@ -24,7 +23,7 @@ import java.io.Serializable;
  * @author Thomas Woehlke
  *
  * @see ControllerThread
- * @see ApplicationCanvas
+ * @see MandelbrotJuliaCanvas
  * @see ApplicationModel
  * @see PanelSubtitle
  * @see PanelCopyright
@@ -42,7 +41,7 @@ import java.io.Serializable;
  * Time: 18:47:46
  */
 @Slf4j
-public class ApplicationFrame extends JFrame implements ImageObserver,
+public class MandelbrotJuliaFrame extends JFrame implements ImageObserver,
         MenuContainer,
         Serializable,
         Accessible,
@@ -53,15 +52,15 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
     private final static long serialVersionUID = 242L;
 
     private volatile ControllerThread controller;
-    private volatile ApplicationCanvas canvas;
+    private volatile MandelbrotJuliaCanvas canvas;
     private volatile ApplicationModel model;
     private volatile Rectangle rectangleBounds;
     private volatile Dimension dimensionSize;
 
-    public ApplicationFrame(ComputerKurzweilProperties config) {
+    public MandelbrotJuliaFrame(ComputerKurzweilProperties config) {
         super(config.getMandelbrotJulia().getView().getTitle());
         this.model = new ApplicationModel(config,this);
-        this.canvas = new ApplicationCanvas(model);
+        this.canvas = new MandelbrotJuliaCanvas(model);
         this.controller = new ControllerThread(model, this);
         PanelSubtitle panelSubtitle = new PanelSubtitle(config.getMandelbrotJulia().getView().getSubtitle());
         PanelCopyright panelCopyright = new PanelCopyright(config.getMandelbrotJulia().getView().getCopyright());
@@ -161,7 +160,7 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
         canvas.setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
     }
 
-    public ApplicationCanvas getCanvas() {
+    public MandelbrotJuliaCanvas getCanvas() {
         return canvas;
     }
 
