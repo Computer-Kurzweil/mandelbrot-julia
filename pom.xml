@@ -14,7 +14,7 @@
 
     <name>Mandelbrot to Julia</name>
     <description>Computing the Edge of the Mandelbrot Set with a Turing Machine</description>
-    <url>https://java.woehlke.org/mandelbrot-julia</url>
+    <url>https://java.woehlke.org/kurzweil/mandelbrot-julia</url>
     <inceptionYear>2013</inceptionYear>
 
     <scm>
@@ -32,7 +32,7 @@
     <distributionManagement>
         <site>
             <id>mandelbrot-julia.local</id>
-            <url>file://${user.home}/public_html/java/mandelbrot-julia</url>
+            <url>file://${user.home}/public_html/java/kurzweil/mandelbrot-julia</url>
         </site>
         <snapshotRepository>
             <id>snapshots</id>
