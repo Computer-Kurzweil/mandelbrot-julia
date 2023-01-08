@@ -56,14 +56,21 @@
     <repositories>
         <repository>
             <id>repository.woehlke.org-releases</id>
-            <name>woehlke.org</name>
+            <name>woehlke.org Releases Repository</name>
             <url>https://repository.woehlke.org/releases/</url>
             <releases></releases>
         </repository>
         <repository>
             <id>repository.woehlke.org-snapshots</id>
-            <name>woehlke.org</name>
+            <name>woehlke.org Snapshots Repository</name>
             <url>https://repository.woehlke.org/snapshots/</url>
+            <snapshots></snapshots>
+        </repository>
+        <repository>
+            <id>Central</id>
+            <name>Central Repository</name>
+            <url>https://repo1.maven.org/maven2/</url>
+            <releases></releases>
             <snapshots></snapshots>
         </repository>
     </repositories>
