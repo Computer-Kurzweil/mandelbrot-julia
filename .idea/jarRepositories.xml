@@ -2,6 +2,11 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="repository.woehlke.org-snapshots" />
+      <option name="name" value="woehlke.org Snapshots Repository" />
+      <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="wso2-public" />
       <option name="name" value="WSO2 Public Repository" />
       <option name="url" value="https://maven.wso2.org/nexus/content/repositories/public/" />
@@ -37,6 +42,11 @@
       <option name="url" value="http://localhost:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="Central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="spring-libs-milestone" />
       <option name="name" value="Spring Lib M Repository" />
       <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
@@ -47,13 +57,13 @@
       <option name="url" value="http://localhost:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="libs-release-local-woehlke-org" />
-      <option name="name" value="woehlke.org" />
+      <option name="id" value="jcenter" />
+      <option name="name" value="JCenter Repository" />
       <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="jcenter" />
-      <option name="name" value="JCenter Repository" />
+      <option name="id" value="libs-release-local-woehlke-org" />
+      <option name="name" value="woehlke.org" />
       <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
@@ -95,6 +105,11 @@
       <option name="id" value="jcenter" />
       <option name="name" value="JCenter Repository" />
       <option name="url" value="http://localhost:8081/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="repository.woehlke.org-releases" />
+      <option name="name" value="woehlke.org Releases Repository" />
+      <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="springio-libs-release" />
