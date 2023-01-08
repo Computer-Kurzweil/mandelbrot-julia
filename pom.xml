@@ -55,9 +55,16 @@
 
     <repositories>
         <repository>
-            <id>libs-release-local-woehlke-org</id>
+            <id>repository.woehlke.org-releases</id>
             <name>woehlke.org</name>
-            <url>https://java.woehlke.org/libs-release-local/</url>
+            <url>https://repository.woehlke.org/releases/</url>
+            <releases></releases>
+        </repository>
+        <repository>
+            <id>repository.woehlke.org-snapshots</id>
+            <name>woehlke.org</name>
+            <url>https://repository.woehlke.org/snapshots/</url>
+            <releases></releases>
         </repository>
     </repositories>
 
