@@ -49,6 +49,18 @@ The most beautiful Julia Sets are drawn by clicking into the Border of the Mande
 ### Clicked  on another Point on the Edge of Mandelbrot Set: The Julia Set
 
 ![Clicked on another Point on the Edge of Mandelbrot Set: The Julia Set](img/julia02.png)
+### Clicked  on another Point on the Edge of Mandelbrot Set: The Julia Set
+
+![Clicked on another Point on the Edge of Mandelbrot Set: The Julia Set](img/screen-julia01.png)
+### Clicked  on another Point on the Edge of Mandelbrot Set: The Julia Set
+
+![Clicked on another Point on the Edge of Mandelbrot Set: The Julia Set](img/screen-julia02.png)
+### Clicked  on another Point on the Edge of Mandelbrot Set: The Julia Set
+
+![Clicked on another Point on the Edge of Mandelbrot Set: The Julia Set](img/screen-julia03.png)
+### Clicked  on another Point on the Edge of Mandelbrot Set: The Julia Set
+
+![Clicked on another Point on the Edge of Mandelbrot Set: The Julia Set](img/screen-julia04.png)
 
 
 ### Repositories
